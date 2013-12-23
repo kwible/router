@@ -1,0 +1,14 @@
+{
+    "name": "kwible/router",
+    "description": "The router component for the Flyer Framework",
+    "require": {
+        "symfony/http-foundation": "2.4.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kwible",
+            "email": "kwibleframework@hotmail.com"
+        }
+    ]
+}
