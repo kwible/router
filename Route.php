@@ -2,55 +2,32 @@
 
 namespace Flyer\Components\Router;
 
+use Flyer\Components\Router\RouteBuilder;
+
 class Route
 {
-
-	private $listener;
-
-	private $route;
-
-	private $method;
-
-	private $options = array();
-
-	public function setListener($listener) 
+	public static function get($uri, $action)
 	{
-		$this->listener = $listener;
+		Router::addRoute("GET", $uri, $action);
 	}
 
-	public function setRoute($route)
+	public static function post($uri, $action)
 	{
-		$this->route = $route;
+		Router::addRoute("POST", $uri, $action);
 	}
 
-	public function setMethod($method)
+	public static function update($uri, $action)
 	{
-		$this->method = $method;
+		Router::addRoute("UPDATE", $uri, $action);
 	}
 
-	public function setOptions(array $options = $options) 
+	public static function delete($uri, $action)
 	{
-		$this->options = $options;
+		Router::addRoute("DELETE", $uri, $action);
 	}
 
-	public function getListener()
+	public static function any($uri, $action)
 	{
-		return $this->listener;
+		Router::addRoute("ANY", $uri, $action);
 	}
-
-	public function getRoute()
-	{
-		return $this->route;
-	}
-
-	public function getMethod()
-	{
-		return $this->method;
-	}
-
-	public function getOptions()
-	{
-		return $this->options;
-	}
-	
 }
